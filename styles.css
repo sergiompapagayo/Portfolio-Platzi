@@ -127,11 +127,20 @@ nav {
   margin: 20px auto;
   width: 40vw;
 }
+
 .social-media a {
-  display: flex;
-  align-content: center;
-  justify-content: space-around;
+  display: grid;
+  place-items: center;
+  grid-row-gap: 8px;
+  padding: 12px;
+  font-family: var(--secondary-font);
+  color: var(--blanco);
+  text-decoration: none;
+}
+
+.social-media a img {
   width: 40px;
+  height: 40px;
 }
 
 .carousel {
