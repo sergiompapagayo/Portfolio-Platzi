@@ -55,6 +55,22 @@ body, header, section {
   background-color: var(--gris-medio);
 }
 
+.skip-link {
+  height: 0;
+}
+
+.skip-link:focus,
+.skip-link:active {
+  margin: 16px 0 8px;
+  border-radius: 5px;
+  padding: 8px;
+  height: auto;
+  font-family: var(--secondary-font);
+  color: var(--gris-oscuro);
+  background: var(--verde);
+  text-decoration: none;
+}
+
 .header {
   margin-top: 16px;
   font-family: var(--main-font);
