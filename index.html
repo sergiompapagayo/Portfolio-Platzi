@@ -98,14 +98,14 @@
               class="project project3">
             </button>
           </li>
-          <li>
+          <li aria-aria-hidden="true">
             <button type="button" name="button">
               <img src="images/project4.png"
               alt="Mi cuarto proyecto"
               class="project project4">
             </button>
           </li>
-          <li>
+          <li aria-aria-hidden="true">
             <button type="button" name="button">
               <img src="images/project5.png"
               alt="Mi quinto proyecto"
@@ -122,9 +122,13 @@
     <footer class="contact-section">
       <h2 class="header">Contacto</h2>
       <form class="form-container">
-        Nombre<input type="text" aria-label="nombree"/> <br />
-        Correo<input type="text" aria-label="email"/> <br />
-        <div class="message-input">Mensaje<input type="text" /> <br /></div>
+        <label for="name" class="form-label">Nombre</label>
+        <input name="name" type="text" aria-label="nombree"/> <br />
+        <label for="email" class="form-label">Correo</label>
+        <input name="email" type="email" aria-label="email"/> <br />
+        <div class="message-input">
+          <label for="message" class="form-label">Mensaje</label>
+          <input name="message" type="text" /> <br /></div>
         <button class="send-button">Enviar</button>
       </form>
     </footer>
