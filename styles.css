@@ -222,7 +222,7 @@ nav {
   outline: 3px solid var(--verde);
 }
 
-.project {
+.project-img {
   margin: 0 8px;
   border-radius: 5px;
   border: 2px solid #000;
@@ -276,8 +276,7 @@ nav {
 }
 
 .form-container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   width: 30%;
 }
 
@@ -304,12 +303,10 @@ input:focus {
 }
 
 
-.send-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.send-button,
+.modal-button {
+  place-self: center;
   margin-bottom: 48px;
-  margin-left: auto;
   border-radius: 5px;
   height: 50px;
   width: 150px;
@@ -317,6 +314,14 @@ input:focus {
   font-size: 16px;
   color: white;
   background-color: var(--verde);
+  cursor: pointer;
+}
+
+.send-button:focus,
+.modal-button:focus {
+  border: 5px solid var(--gris-oscuro);
+  border-radius: 5px;
+  outline: 3px solid var(--verde);
 }
 
 .notification {
@@ -344,17 +349,20 @@ input:focus {
   background-color: rgba(000, 000, 000, 0.2);
 }
 
+#modal-header {
+  outline: 3px solid var(--verde);
+}
+
 .modal {
   position: fixed;
-  top: 15%;
-  width: 700px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 5px;
   border: 2px solid #000;
-  height: 700px;
+  width: 700px;
+  height: 600px;
   background-color: var(--gris-oscuro);
 }
 

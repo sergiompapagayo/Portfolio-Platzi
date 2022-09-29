@@ -8,6 +8,7 @@ window.onload = () => {
     element.addEventListener("click", e => openModal(e));
   });
   document.body.addEventListener("click", e => closeModal(e));
+  document.body.addEventListener('keyup', e => listenForEscape(e));
 };
 
 /** Esta funcion se llama cuando la persona hace click en la fecha derecha del carousel para navegar a la derecha */
@@ -53,11 +54,15 @@ function clickLeft() {
   switch (newValue) {
     case -270:
     document.queryselector('.project5').setAttribute('tabindex', '-1');
+    document.queryselector('.project5-container').setAttribute('area-hidden', true);
     document.queryselector('.project2').removeAttribute('tabindex');
+    document.queryselector('.project2-container').removeAttribute('area-hidden');
     break;
     case 0:
     document.queryselector('.project4').setAttribute('tabindex', '-1');
+    document.queryselector('.project4-container').setAttribute('area-hidden', true);
     document.queryselector('.project1').removeAttribute('tabindex');
+    document.queryselector('.project1-container').removeAttribute('area-hidden');
     break;
     default:
     break;
@@ -72,9 +77,17 @@ function showNotification() {
   }, 3000);
 }
 
+/** Esta funcion escucha por la tecla ESC para cerrar el modal */
+function listenForEscape(e) {
+  if(e.keyCode === 27) {
+    closeModal(e);
+  }
+}
+
 /** Esta funcion se llama cuando la persona hace click en cualquier porjecto del carousel */
 function openModal(e) {
   document.querySelector(".modal-container").style.display = "flex";
+  document.getElementById('modal-header').focus();
 }
 
 /** Esta funcion se llama para cerrar el modal */
