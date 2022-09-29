@@ -242,6 +242,13 @@ nav {
   height: 75px;
   transition: all 0.2s ease-in-out;
   width: 75px;
+  border: none;
+  cursor: pointer;
+  outline: 3px solid var(--gris-oscuro);
+}
+
+.arrow:focus {
+  outline: 3px solid var(--verde);
 }
 
 .arrow:hover {
