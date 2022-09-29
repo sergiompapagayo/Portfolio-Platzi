@@ -24,11 +24,15 @@ function clickRight() {
   switch (newValue) {
     case -270:
     document.queryselector('.project1').setAttribute('tabindex', '-1');
+    document.queryselector('.project1-container').setAttribute('area-hidden', true);
     document.queryselector('.project4').removeAttribute('tabindex');
+    document.queryselector('.project4-container').removeAttribute('area-hidden');
     break;
     case -540:
     document.queryselector('.project2').setAttribute('tabindex', '-1');
+    document.queryselector('.project2-container').setAttribute('area-hidden', true);
     document.queryselector('.project5').removeAttribute('tabindex');
+    document.queryselector('.project5-container').removeAttribute('area-hidden');
     break;
     default:
     break;
