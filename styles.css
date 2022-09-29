@@ -324,6 +324,12 @@ input:focus {
   outline: 3px solid var(--verde);
 }
 
+#name-error {
+  font-family: var(--secondary-font);
+  color: white;
+  text-align: center;
+}
+
 .notification {
   position: fixed;
   right: 24px;
@@ -335,7 +341,7 @@ input:focus {
   height: 50px;
   width: 300px;
   font-family: var(--secondary-font);
-  color: var(--blanco);
+  color: var(--gris-oscuro);
   background-color: var(--verde);
   box-shadow: 8px 16px 32px 0px var(--shadow);
 }

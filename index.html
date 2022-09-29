@@ -134,9 +134,12 @@
 
     <footer class="contact-section">
       <h2 class="header">Contacto</h2>
+      <p class="intro">Puedes usar este formulario para enviarme un mensaje</p>
+      <br />
       <form class="form-container">
         <label for="name" class="form-label">Nombre</label>
-        <input name="name" type="text" aria-label="nombree"/> <br />
+        <input name="name" type="text" aria-label="nombre" id="name"/>
+        <span id="name-error"></span> <br />
         <label for="email" class="form-label">Correo</label>
         <input name="email" type="email" aria-label="email"/> <br />
         <div class="message-input">
